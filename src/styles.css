@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Generales */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+}
+
+button {
+    background-color: cadetblue;
+    border: none;
+    border-radius: 0.3em;
+    font-size: 1em;
+    color: white;
+    padding: 0.5em 1em;
+}
+
+/* Layout */
+
+.contenedor {
+    padding: 0.5em 1em;
+}
+
+/* Barra navegación superior */
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5em 1em;
+}
+
+nav div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav div span {
+    margin-right: 1em;
+}
