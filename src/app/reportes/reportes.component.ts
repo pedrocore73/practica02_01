@@ -13,7 +13,17 @@ export class ReportesComponent implements OnInit {
   constructor(private reportesService: ReportesService) { }
 
   ngOnInit() {
-    this.reportes = this.reportesService.getReportesVentas();
+
+  }
+
+  loadReportesVentas() {
+    const reportes = this.reportesService.getReportes();
+    this.reportes = reportes.ventas;
+  }
+
+  loadReportesCompras() {
+    const reportes = this.reportesService.getReportes();
+    this.reportes = reportes.compras;
   }
 
 }

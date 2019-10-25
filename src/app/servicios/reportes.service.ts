@@ -11,10 +11,20 @@ export class ReportesService {
     {mes: 'Marzo', importe: 3500}
   ];
 
+  reportesCompras = [
+    {mes: 'Enero', importe: 1000},
+    {mes: 'Febrero', importe: 1500},
+    {mes: 'Marzo', importe: 2000}
+  ];
+
   constructor() { }
 
-  getReportesVentas () {
-    return this.reportesVentas;
+  getReportes () {
+    const reportes = {
+      ventas: this.reportesVentas,
+      compras: this.reportesCompras
+    }
+    return reportes;
   }
 
 }

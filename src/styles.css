@@ -26,6 +26,16 @@ button {
     padding: 0.5em 1em;
 }
 
+.fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fila button {
+    margin-left: 0.5em;
+}
+
 /* Barra navegación superior */
 
 nav {
