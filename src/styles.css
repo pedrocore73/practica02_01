@@ -34,6 +34,15 @@ button {
 
 .fila button {
     margin-left: 0.5em;
+    border: 2px solid crimson;
+    background-color: white;
+    color: crimson;
+}
+
+.fila button.selected {
+    border: 2px solid crimson;
+    background-color: crimson;
+    color: white;
 }
 
 /* Barra navegación superior */
@@ -83,4 +92,22 @@ th:nth-child(1) {
 
 td:nth-child(2) {
     text-align: right;
+}
+
+/* Formulario */
+
+form {
+    width: 60%;
+    padding: 1em;
+    box-shadow: 2px 2px 3px grey;
+    margin: 1em auto;
+}
+
+input {
+    border: 2px solid cadetblue;
+    border-radius: 0.3em;
+    font-size: 1em;
+    color: grey;
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
 }

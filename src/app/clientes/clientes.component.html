@@ -1,3 +1,18 @@
 <div class="contenedor">
     <h1>💏 Clientes</h1>
+    <form [formGroup]="formCliente" (ngSubmit)="nuevoCliente()">
+        <input type="text" placeholder="Nombre" formControlName="nombre">
+        <input type="text" placeholder="CIF" formControlName="cif">
+        <button>Añadir</button>
+    </form>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>CIF</th>
+        </tr>
+        <tr *ngFor="let cliente of clientes">
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.cif}}</td>
+        </tr>
+    </table>
 </div>

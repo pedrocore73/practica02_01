@@ -2,8 +2,11 @@
     <div class="fila">
         <h1>🤦‍Reportes 🥱</h1>
         <div>
-            <button (click)="loadReportesVentas()">Ventas</button> 
-            <button (click)="loadReportesCompras()">Compras</button>
+            <!-- [ngClass]="{'nombredelaclase': expresiónJs}"-->
+            <button (click)="loadReportesVentas()" 
+                    [ngClass]="{'selected': activado === 'ventas'}">Ventas</button> 
+            <button (click)="loadReportesCompras()" 
+                    [ngClass]="{'selected': activado === 'compras'}">Compras</button>
         </div>
     </div>
     <table>
