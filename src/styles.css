@@ -44,3 +44,33 @@ nav div {
 nav div span {
     margin-right: 1em;
 }
+
+/* Tablas */
+
+table {
+    width: 60%;
+    padding: 1em;
+    box-shadow: 2px 2px 3px grey;
+    margin: 1em auto;
+}
+
+th {
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    background-color: crimson;
+    color: white;
+}
+
+td {
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border: 2px solid crimson;
+}
+
+th:nth-child(1) {
+    text-align: left;
+}
+
+td:nth-child(2) {
+    text-align: right;
+}

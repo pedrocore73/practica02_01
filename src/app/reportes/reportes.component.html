@@ -1,3 +1,13 @@
 <div class="contenedor">
     <h1>🤦‍Reportes 🥱</h1>
+    <table>
+        <tr>
+            <th>Mes</th>
+            <th>Importe</th>
+        </tr>
+        <tr *ngFor="let reporte of reportes">
+            <td>{{reporte.mes}}</td>
+            <td>{{reporte.importe}}</td>
+        </tr>
+    </table>
 </div>
