@@ -2,7 +2,7 @@
     <div *ngIf="logueado">
         <span routerLink="/">Inicio</span>
         <span routerLink="/reportes">Reports</span>
-        <span>Clientes</span>
+        <span routerLink="/clientes">Clientes</span>
     </div>
     <button *ngIf="!logueado" (click)="iniciarSesion()">Iniciar sesión</button>
     <button *ngIf="logueado" (click)="cerrarSesion()">Cerrar sesión</button>
