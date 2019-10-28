@@ -19,14 +19,22 @@ export class ReportesComponent implements OnInit {
 
   loadReportesVentas() {
     this.activado = 'ventas';
-    const reportes = this.reportesService.getReportes();
-    this.reportes = reportes.ventas;
+    this.reportesService.getReportes()
+                .subscribe((res: any)=>{
+                  this.reportes = res.reportesVentas;
+                },(error: any)=>{
+                  console.log(error);
+                })
   }
 
   loadReportesCompras() {
     this.activado = 'compras';
-    const reportes = this.reportesService.getReportes();
-    this.reportes = reportes.compras;
+    this.reportesService.getReportes()
+                .subscribe((res: any)=>{
+                  this.reportes = res.reportesCompras;
+                },(error: any)=>{
+                  console.log(error);
+                })
   }
 
 }

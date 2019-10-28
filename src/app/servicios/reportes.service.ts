@@ -1,30 +1,21 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReportesService {
 
-  reportesVentas = [
-    {mes: 'Enero', importe: 3000},
-    {mes: 'Febrero', importe: 2000},
-    {mes: 'Marzo', importe: 3500}
-  ];
 
-  reportesCompras = [
-    {mes: 'Enero', importe: 1000},
-    {mes: 'Febrero', importe: 1500},
-    {mes: 'Marzo', importe: 2000}
-  ];
-
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getReportes () {
-    const reportes = {
-      ventas: this.reportesVentas,
-      compras: this.reportesCompras
-    }
-    return reportes;
+    return this.http.get('http://localhost:3000/reportes').pipe(
+      map((resp: any)=>{
+        return resp;
+      })
+    )
   }
 
 }
