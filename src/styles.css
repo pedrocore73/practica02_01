@@ -111,3 +111,18 @@ input {
     padding: 0.5em 1em;
     margin-right: 0.5em;
 }
+
+/* Mensajes */
+
+.mensaje {
+    border: 2px solid cadetblue;
+    background-color: rgba(95, 158, 160, 0.7);
+    border-radius: 0.3em;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
+    position: absolute;
+    top: 0.3em;
+    left: 50%;
+    transform: translateX(-50%);
+}

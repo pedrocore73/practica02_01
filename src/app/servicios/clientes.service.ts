@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,12 +7,18 @@ import { Injectable } from '@angular/core';
 export class ClientesService {
 
   clientes = [];
+  mensaje: String;
+  private mensajeIn = new BehaviorSubject<any>({mensaje: ''});
+
+  get isMensajeIn() {
+    return this.mensajeIn.asObservable();
+  }
 
   constructor() { }
 
   crearCliente (cliente) {
     this.clientes.push(cliente);
-    console.log(this.clientes);
+    this.mensajeIn.next({mensaje: 'Cliente creado correctamente'});
   }
 
   getClientes() {

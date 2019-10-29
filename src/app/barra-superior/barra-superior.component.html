@@ -1,4 +1,5 @@
 <nav>
+    <div class="mensaje" *ngIf="mostrarMensaje">{{mensaje}}</div>
     <div *ngIf="logueado">
         <span routerLink="/">Inicio</span>
         <span routerLink="/reportes">Reports</span>
